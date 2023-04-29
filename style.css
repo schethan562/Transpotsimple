@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+:root{
+    --red:--blue;
+}
+*{
+    font-family: 'nunito' , sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(pink);
+    color: skyblue;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+}
+body{
+    background: chocolate;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 3rem;
+    color: yellowgreen;
+}
+.heading span{
+    color: var(green);
+}
+.btn{
+    display: inline-block;
+    padding: 0rem 2rem;
+    border: 2rem solid var(--blue);
+    color: var(skyblue);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+    .btn::before{
+        content: '';
+        position: absolute;
+        top: 0;right: 0;
+        width:100%;
+        height:100% ;
+        background: var(orange);
+        transition: .3s linear;
+        z-index: -1;
+    }
+    .btn:hover::before{
+        width: 100%;
+        left: 0;
+
+    
+    }
+    .btn:hover{
+        color: goldenrod;
+    }
+
+
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: greenyellow;
+    padding: 3rem 9%; 
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #666;
+}
+header .logo i{
+    padding-right: 5rem;
+    color:var(--red)
+}
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: palevioletred;
+}
+header .navbar a:hover{
+    color: var(--red);
+
+}
+#menu.bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: sienna;
+    border: 1rem solid salmon;
+    border-radius: 3rem;
+    padding: 5rem 1.5rem;
+    display: none;
+}
+.Home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(f7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.Home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+.Home .imge{
+    flex: 1 1 40rem;
+}
+.Home .imge img{
+    width: 80%;
+    padding: 3rem;
+    animation: float 3s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+}
+
+.Home .content h3{
+    font-size: 5rem;
+    color: greenyellow;
+
+}
+.Home .content p{
+    font-size: 1.7rem;
+    color: green;
+    padding: 3rem 1;
+}
+
+.Feature .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+.Feature .box-container .box{
+   flex: 1 1 50rem;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+   border: 1rem solid rgba(0, 0, 0, 1);
+   cursor: pointer;
+   border-radius: .5rem;
+}
+.Feature .box-container .box .imge{
+height: 15%;
+width: 40%;
+object-fit: cover;
+position: absolute;
+top: 10%;left: 0;
+
+}
+
+.Feature .box-container .box .content{
+    text-align: center;
+    background: beige;
+    padding: 3rem;
+}
+.Feature .box-container .box .content imge{
+    margin: 1.5rem 0;
+
+}
+.Feature .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: seagreen;
+}
+.Feature .box-container .box .content p{
+    font-size: 1.6rem;
+    color: blueviolet;
+    padding: 3rem 0;
+}
+
+.Feature .box-container .box:hover  .image{
+    top: 0;
+}
+.Feature .box-container .box:hover  .content{
+    transform: translate(100%);
+}
+
+.Industry .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.Industry .box-container .box{
+    padding: 2rem;
+    background: forestgreen;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+    border: 1rem solid rgba(0, 0, 0, 1);
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+    position: relative;
+}
+.Industry .box-container .box img{
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.Industry .box-container .box price{
+    position: absolute;
+    top: 3rem;left: 3rem;
+    background: var(--red);
+    color: #55ffe5;
+    font-size: 2rem;
+    padding: 3rem 0rem;
+    border-radius: 5rem;
+}
+
+.Industry .box-container .box h3{
+    color: #ccc;
+    font-size: 2.5rem;
+    padding: 3rem;
+}
+
+
+.Industry .box-container .box .stars{
+    color: pink;
+    font-size: 1.7rem;
+    padding: .3rem;
+}
+
+.steps{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem ;
+}
+
+.steps .box{
+    flex: 1 1 25rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.steps .box img{
+    border-radius: 50%;
+    border: 1rem solid orange;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 1);
+
+}
+
+.steps .box h3{
+    font-size: 3rem;
+    color: #333;
+    padding: 1rem;
+
+}
+
+.About .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.About .box-container .box{
+    height: 25rem;
+    flex: 1 1 30rem;
+    border: 1rem solid gray;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+    border-radius: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.About .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.About .box-container .box .content{
+    position: absolute;
+    top: 100%;left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 9);
+    padding: 2rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.About .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: gold;
+}
+
+
+.About .box-container .box .content p{
+    font-size: 1.5rem;
+    color: khaki;
+    padding: 1rem 0;
+}
+
+.About .box-container .box:hover .content{
+    top: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+ body{
+    background: blueviolet;
+    font-size: 14px;
+
+ }
+ .container{
+    width: 100%;
+    margin: 80px auto; 
+ }
+
+.Contact-box{
+    background: coral;
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 100%;
+    padding: 20px 40px;
+}
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background: aqua;
+    color: palevioletred;
+}
+h1{
+    margin-bottom: 10px;
+
+}
+.container p{
+    margin-bottom: 40px;
+}
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group{
+    flex-basis: 45%;
+
+}
+
+input{
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid red;
+    outline: none;
+    padding-bottom: 6px;
+}
+
+textarea{
+    width: 80px;
+    border: 1px solid indianred;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: tomato;
+}
+
+button{
+    background: hotpink;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: khaki;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+
+}
+.contact-left h3{
+    color: darkkhaki;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+}
+
+.contact-right h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    
+}
+
+tr td:first-child{
+    padding-right: 20px;
+
+}
+tr td{
+    padding-top: 20px;
+}
+
+
+
+    .Getstrarted .row{
+        padding: 2rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+        background: goldenrod;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        border-radius: .5rem;
+
+    }
+    .Get .strarted.image{
+        flex: 1 1 30rem;
+
+    }
+
+
+    .Get .strarted .image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5rem;
+
+
+    }
+
+ .Get .strarted from{
+    flex: 1 1 50rem;
+    padding: 1rem;
+ }
+
+ 
+ .Get.strarted  form .inputbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .Get .strarted form .inputbox input, .order .row form textarea{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size:  1.7rem;
+    color: hotpink;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, 3);
+    border-radius: .5rem;
+    width: 49%;
+
+ }
+ .Get .strarted form textarea{
+    width:100%;
+    resize: none;
+    height: 15rem;
+ }
+
+ .Get .strarted form .btn{
+    background: none;
+ }
+
+
+ .Get .strarted form .btn:hover{
+    background: var(--blue);
+ }
+.footer{
+    background: blueviolet;
+    text-align: center;
+    
+}
+
+.footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer .credit{
+    padding: 2.5rem 1rem;
+    color: #55ffe5;
+    font-weight: normal;
+    font-size: 2rem;
+
+}
+
+.footer .credit span{
+    color: var(--blue);
+}
+#scroll-top{
+    position: fixed;
+    top: -120%;
+    right: 2rem;
+    padding: 5rem 1.5rem;
+    font-size: 4rem;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+
+
+#scroll-top.active{
+    top:calc(100% - 12rem)
+}
+
+
+/*media queries */
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+
+    }
+    header{
+        padding: 2rem;
+
+    }
+    section{
+        padding: 2rem;
+    }
+
+
+    @media (max-width:768px) {
+        #menu-bar{
+            display: initial;
+        }
+
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0;right: 0;
+        background: papayawhip;
+        border-top: 1rem solid rgba(0, 0, 0, 1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: 2rem solid rgba(0, 0, 0, 1);
+        border: 2rem solid rgba(0, 0, 0, 1);
+        border-left: 5rem solid var(--red);
+        background: peru;
+    }   
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+    }
+    .order .row form .inputbox input{
+        width:100% ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
